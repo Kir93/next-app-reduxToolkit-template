@@ -2,11 +2,11 @@
 
 import { Button } from '@chakra-ui/react';
 import { login, logout } from '@reducers/user';
-import { useTypeDispatch, useTypeSelector } from '@utils/useTypeRedux';
+import { useAppDispatch, useAppSelector } from '@utils/useTypeRedux';
 
 const ReducerButtonSection: React.FC = () => {
-  const dispatch = useTypeDispatch();
-  const { me } = useTypeSelector((state) => state.user);
+  const dispatch = useAppDispatch();
+  const { me } = useAppSelector((state) => state.user);
   const onClickButton = () => {
     if (me === null) {
       dispatch(login());
