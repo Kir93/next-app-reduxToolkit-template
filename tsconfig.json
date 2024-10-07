@@ -1,26 +1,50 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
     "esModuleInterop": true,
+    "sourceMap": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "preserve",
     "module": "esnext",
     "moduleResolution": "bundler",
+    "target": "es5",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "resolveJsonModule": true,
+    "allowJs": true,
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@APIs": ["APIs"],
+      "@utils": ["utils"],
+      "@configs": ["configs"],
+      "@styles": ["src/styles"],
+      "@public": ["public"],
+      "@reducers": ["reducers"],
+      "@atoms": ["atoms"],
+      "@components": ["components"],
+      "@providers": ["providers"],
+      "@APIs/*": ["APIs/*"],
+      "@utils/*": ["utils/*"],
+      "@configs/*": ["configs/*"],
+      "@styles/*": ["styles/*"],
+      "@public/*": ["public/*"],
+      "@reducers/*": ["reducers/*"],
+      "@atoms/*": ["atoms/*"],
+      "@components/*": ["components/*"],
+      "@providers/*": ["providers/*"]
+    },
+    "incremental": true,
+    "plugins": [{ "name": "next" }]
   },
+
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
