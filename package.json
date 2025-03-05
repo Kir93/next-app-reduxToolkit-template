@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
-    "@chakra-ui/react": "^3.8.0",
+    "@chakra-ui/react": "^3.8.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@reduxjs/toolkit": "^2.5.1",
