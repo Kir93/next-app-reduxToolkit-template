@@ -1,16 +1,16 @@
-import CustomColorBar from '@atoms/CustomColorBar/CustomColorBar';
-import { Text } from '@chakra-ui/react';
-import CommonBar from '@components/Common/CommonBar';
-import { HomeButtonSection, ReducerButtonSection } from '@components/Home';
+import { Box, Text } from '@chakra-ui/react';
+
+import CommonBar from '@atoms/common/CommonBar';
+
+import { HomeButtonSection, ReducerButtonSection } from '@components/homes';
 
 export default function Home() {
   return (
-    <main>
+    <Box w="100%">
       <HomeButtonSection />
-      <Text size='lg'>Home Style!</Text>
+      <Text fontSize="lg">Home Style!</Text>
       <CommonBar />
-      <CustomColorBar color='#ff9595' />
       <ReducerButtonSection />
-    </main>
+    </Box>
   );
 }

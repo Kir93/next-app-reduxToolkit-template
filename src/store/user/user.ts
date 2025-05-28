@@ -1,5 +1,6 @@
-import { logIn, logOut } from '@APIs/user/user';
 import { createSlice } from '@reduxjs/toolkit';
+
+import { logIn, logOut } from '@api/user';
 
 import { IUser } from './user.types';
 
@@ -12,15 +13,15 @@ export const initialState = {
 
   logOutLoading: false,
   logOutDone: false,
-  logOutError: '',
+  logOutError: ''
 };
 
 export type UserReducerState = typeof initialState;
 
 const dummyUser = {
   id: 1,
-  nickname: '티릴리',
-  Posts: [{ id: '1' }],
+  nickname: 'kir',
+  Posts: [{ id: '1' }]
 };
 
 const userSlice = createSlice({
@@ -32,7 +33,7 @@ const userSlice = createSlice({
     },
     logout: (state) => {
       state.me = null;
-    },
+    }
   },
   extraReducers: (builder) =>
     builder
@@ -64,7 +65,7 @@ const userSlice = createSlice({
         state.logOutLoading = false;
         state.logOutError = action.error.message ?? '';
       })
-      .addDefaultCase((state) => state),
+      .addDefaultCase((state) => state)
 });
 
 export const { login, logout } = userSlice.actions;

@@ -1,7 +1,9 @@
 'use client';
 
 import { Button } from '@chakra-ui/react';
-import { login, logout } from '@reducers/user';
+
+import { login, logout } from '@store/user';
+
 import { useAppDispatch, useAppSelector } from '@utils/useTypeRedux';
 
 const ReducerButtonSection: React.FC = () => {
@@ -16,7 +18,7 @@ const ReducerButtonSection: React.FC = () => {
   };
 
   return (
-    <Button colorScheme='primary' onClick={onClickButton}>
+    <Button colorScheme="primary" onClick={onClickButton}>
       {me === null ? 'Log In' : 'Log Out'}
     </Button>
   );

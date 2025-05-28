@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-import { loadPosts } from '@APIs/post/post';
-import { IPost } from './post.types';
 import { filter } from 'es-toolkit/compat';
+
+import { loadPosts } from '@api/post';
+
+import { IPost } from './post.types';
 
 export const initialState = {
   mainPosts: [] as IPost[],

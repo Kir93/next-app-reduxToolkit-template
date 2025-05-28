@@ -1,24 +1,24 @@
-import '@styles/global.css';
-import type { Metadata } from 'next';
-
-import ReduxProvider from '@providers/ReduxProvider';
-import ChakraUIProvider from '@providers/ChakraUIProvider';
-
 import { notoSans } from '@configs/bigContents';
-import { AppLayout } from '@components/Layout';
+
+import ChakraUIProvider from '@provider/ChakraUIProvider';
+import ReduxProvider from '@provider/ReduxProvider';
+
+import { AppLayout } from '@components/layouts';
+
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'NextJS App Router Redux Toolkit Template',
-  description: 'Simple NextJS App Route Template',
+  description: 'Simple NextJS App Route Template'
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='ko' className={notoSans.variable}>
+    <html lang="ko" className={notoSans.variable}>
       <body>
         <ReduxProvider>
           <ChakraUIProvider>

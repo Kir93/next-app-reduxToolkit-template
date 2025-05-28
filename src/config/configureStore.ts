@@ -1,14 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import userSlice from '@reducers/user';
-import postSlice from '@reducers/post';
+import postSlice from '@store/post';
+import userSlice from '@store/user';
 
 const isDev = process.env.NODE_ENV === 'development';
 
 export const makeStore = () => {
   const store = configureStore({
     reducer: { user: userSlice.reducer, post: postSlice.reducer },
-    devTools: isDev,
+    devTools: isDev
   });
   return store;
 };
