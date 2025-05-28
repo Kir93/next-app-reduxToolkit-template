@@ -2,7 +2,7 @@ import { Box, Text } from '@chakra-ui/react';
 
 import CommonBar from '@atoms/common/CommonBar';
 
-import { HomeButtonSection, ReducerButtonSection } from '@components/homes';
+import { HomeButtonSection, ReducerButtonSection } from '@components/home';
 
 export default function Home() {
   return (

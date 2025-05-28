@@ -3,7 +3,7 @@ import { notoSans } from '@configs/bigContents';
 import ChakraUIProvider from '@provider/ChakraUIProvider';
 import ReduxProvider from '@provider/ReduxProvider';
 
-import { AppLayout } from '@components/layouts';
+import { AppLayout } from '@components/layout';
 
 import type { Metadata } from 'next';
 

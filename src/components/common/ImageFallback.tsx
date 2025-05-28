@@ -1,6 +1,6 @@
-import React, { FC, memo, useCallback, useEffect, useState } from 'react';
+import { FC, useCallback, useEffect, useState } from 'react';
+
 import Image, { ImageProps } from 'next/image';
-import equal from 'fast-deep-equal';
 
 import { blurDataURL } from '@configs/bigContents';
 
@@ -31,4 +31,4 @@ const ImageFallback: FC<IProps> = (props) => {
   );
 };
 
-export default memo(ImageFallback, equal);
+export default ImageFallback;
