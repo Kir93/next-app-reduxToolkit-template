@@ -18,7 +18,7 @@ const ReducerButtonSection: React.FC = () => {
   };
 
   return (
-    <Button colorScheme="primary" onClick={onClickButton}>
+    <Button colorPalette="primary" onClick={onClickButton}>
       {me === null ? 'Log In' : 'Log Out'}
     </Button>
   );
