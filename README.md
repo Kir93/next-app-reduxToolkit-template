@@ -7,9 +7,10 @@ https://github.com/Kir93/next-app-reduxToolkit-template.git use this template an
 git clone https://github.com/Kir93/{PROJECT_NAME}.git
 ```
 
-1. npm install || yarn
-2. styles folder theme changed
-3. npm run dev || yarn dev
+1. Install packages - pnpm install or npm install or yarn
+2. Changed Theme - ./src/styles/theme.ts
+3. Theme Typegen - npx @chakra-ui/cli typegen ./src/styles/theme.ts
+4. Running Project - pnpm dev or npm run dev or yarn dev
 
 ---
 
@@ -17,17 +18,17 @@ git clone https://github.com/Kir93/{PROJECT_NAME}.git
 
 NextJS App Route Simple Template
 
-- FrameWork : NextJS
-- Styling : ChakraUI
-- Store/API : Redux Toolkit
+- FrameWork : next
+- Styling Tool: @chakra-ui/react
+- Global/Server State Management : @reduxjs/toolkit
 
 ## Package Version
 
 Important library version history
 
-| Name          | Version  |
-| :------------ | :------- |
-| react         | v18      |
-| next          | v14.2.14 |
-| chakra-ui     | v2.8.2   |
-| redux-toolkit | v2.2.7   |
+| Name             | Version |
+| :--------------- | :------ |
+| react            | v19     |
+| next             | v15     |
+| @chakra-ui/react | v3.19.1 |
+| @reduxjs/toolkit | v2.7.0  |
