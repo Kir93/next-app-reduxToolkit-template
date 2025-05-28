@@ -8,15 +8,12 @@ const theme = defineConfig({
       padding: 0,
       font: 'inherit',
       color: 'inherit',
-      boxSizing: 'border-box',
-    },
+      boxSizing: 'border-box'
+    }
   },
   theme: {
     tokens: {
-      fonts: {
-        heading: { value: '--font-noto-sans' },
-        body: { value: '--font-noto-sans' },
-      },
+      fonts: { heading: { value: '--font-noto-sans' }, body: { value: '--font-noto-sans' } },
       colors: {
         primary: {
           900: { value: '#1a5de4' },
@@ -28,7 +25,7 @@ const theme = defineConfig({
           300: { value: '#a6c4f9' },
           200: { value: '#bcd2fa' },
           100: { value: '#d2e1fc' },
-          50: { value: '#e8f0fe' },
+          50: { value: '#e8f0fe' }
         },
         secondary: {
           900: { value: '#b296ff' },
@@ -40,24 +37,13 @@ const theme = defineConfig({
           300: { value: '#e0d5ff' },
           200: { value: '#f0eaff' },
           100: { value: '#e8dfff' },
-          50: { value: '#f7f4ff' },
+          50: { value: '#f7f4ff' }
         },
         warning: { value: '#e03028' },
         success: { value: '#2fb916' },
         black: { value: '#000' },
-        white: { value: '#fff' },
-        gray: {
-          900: { value: '#3b3f4a' },
-          800: { value: '#5a5e6a' },
-          700: { value: '#7f828c' },
-          600: { value: '#9da0a8' },
-          500: { value: '#bec1c7' },
-          400: { value: '#d5d8dc' },
-          300: { value: '#e4e6ea' },
-          200: { value: '#eff1f4' },
-          100: { value: '#f9fafc' },
-        },
-      },
+        white: { value: '#fff' }
+      }
     },
     semanticTokens: {
       colors: {
@@ -68,7 +54,7 @@ const theme = defineConfig({
           muted: { value: '{colors.primary.100}' },
           subtle: { value: '{colors.primary.200}' },
           emphasized: { value: '{colors.primary.300}' },
-          focusRing: { value: '{colors.primary.900}' },
+          focusRing: { value: '{colors.primary.900}' }
         },
         secondary: {
           solid: { value: '{colors.secondary.900}' },
@@ -77,19 +63,13 @@ const theme = defineConfig({
           muted: { value: '{colors.secondary.100}' },
           subtle: { value: '{colors.secondary.200}' },
           emphasized: { value: '{colors.secondary.300}' },
-          focusRing: { value: '{colors.secondary.900}' },
+          focusRing: { value: '{colors.secondary.900}' }
         },
-        warning: {
-          solid: { value: '{colors.warning}' },
-          outline: { value: '{colors.warning}' },
-        },
-        success: {
-          solid: { value: '{colors.success}' },
-          outline: { value: '{colors.success}' },
-        },
-      },
-    },
-  },
+        warning: { solid: { value: '{colors.warning}' }, outline: { value: '{colors.warning}' } },
+        success: { solid: { value: '{colors.success}' }, outline: { value: '{colors.success}' } }
+      }
+    }
+  }
 });
 
 export default createSystem(defaultConfig, theme);
