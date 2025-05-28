@@ -4,13 +4,13 @@
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
-    },
+      "jsx": true
+    }
   },
   "env": {
     "browser": true,
     "node": true,
-    "es6": true,
+    "es6": true
   },
   "plugins": ["import", "prettier"],
   "extends": ["next", "prettier"],
@@ -18,72 +18,66 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["sibling", "parent", "index"],
-          "type",
-        ],
+        "groups": ["builtin", "external", "internal", ["sibling", "parent", "index"], "type"],
         "pathGroups": [
           {
             "pattern": "{react*,react*/**}",
             "group": "external",
-            "position": "before",
+            "position": "before"
           },
           {
             "pattern": "@public/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@styles/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@api/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@store/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@utils/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@config/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@provider/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@atoms/**",
             "group": "internal",
-            "position": "after",
+            "position": "after"
           },
           {
             "pattern": "@components/**",
             "group": "internal",
-            "position": "after",
-          },
+            "position": "after"
+          }
         ],
         "pathGroupsExcludedImportTypes": ["type"],
         "alphabetize": {
           "order": "asc",
-          "caseInsensitive": true,
+          "caseInsensitive": true
         },
-        "newlines-between": "always",
-      },
+        "newlines-between": "always"
+      }
     ],
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/anchor-is-valid": "off",
@@ -103,34 +97,31 @@
     "import/prefer-default-export": "off",
     "no-alert": "off",
     "import/no-unresolved": "off",
-    "react/jsx-wrap-multilines": [
-      "error",
-      { "declaration": false, "assignment": false },
-    ],
+    "react/jsx-wrap-multilines": ["error", { "declaration": false, "assignment": false }],
     "max-params": ["error", 4],
     "max-lines": [
       "error",
       {
         "max": 200,
         "skipBlankLines": false,
-        "skipComments": false,
-      },
+        "skipComments": false
+      }
     ],
-    "multiline-comment-style": "error",
+    "multiline-comment-style": "error"
   },
   "overrides": [
     {
       "files": ["./src/api/**", "./src/utils/**"],
       "rules": {
         "max-lines": "off",
-        "max-lines-per-function": ["error", { "max": 100 }],
-      },
+        "max-lines-per-function": ["error", { "max": 100 }]
+      }
     },
     {
       "files": ["./src/store/**"],
       "rules": {
-        "max-lines": "off",
-      },
-    },
-  ],
+        "max-lines": "off"
+      }
+    }
+  ]
 }
