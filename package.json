@@ -46,7 +46,7 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.1.6",
     "cross-env": "^7.0.3",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "eslint-config-next": "15.3.2",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-import": "^2.30.0",
