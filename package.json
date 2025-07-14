@@ -9,8 +9,6 @@
     "postbuild": "next-sitemap --config sitemap.config.js",
     "start": "cross-env NODE_ENV=production next start",
     "analyzer": "cross-env NODE_ENV=production ANALYZE=true next build",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
     "type-check": "tsc",
     "depcheck": "npx depcheck",
     "svgo": "npx svgo -f public/svgs",
@@ -24,14 +22,11 @@
     "not ie <= 11"
   ],
   "dependencies": {
-    "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^3.21.0",
     "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
     "@reduxjs/toolkit": "^2.7.0",
     "dayjs": "^1.11.13",
     "es-toolkit": "^1.39.3",
-    "framer-motion": "^12.19.1",
     "next": "latest",
     "next-sitemap": "^4.2.3",
     "react": "^19",
