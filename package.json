@@ -39,7 +39,7 @@
     "@next/eslint-plugin-next": "^16.0.3",
     "@types/node": "24.10.0",
     "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
+    "@types/react-dom": "^19.2.3",
     "cross-env": "^10.1.0",
     "eslint": "^9.39.1",
     "eslint-config-next": "16.0.5",
