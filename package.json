@@ -34,7 +34,7 @@
     "react-redux": "^9.1.2"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.1",
     "@next/eslint-plugin-next": "^16.0.3",
     "@types/node": "24.10.1",
