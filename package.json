@@ -24,7 +24,7 @@
   "dependencies": {
     "@chakra-ui/react": "^3.29.0",
     "@emotion/react": "^11.13.3",
-    "@reduxjs/toolkit": "^2.11.0",
+    "@reduxjs/toolkit": "^2.11.1",
     "dayjs": "^1.11.19",
     "es-toolkit": "^1.42.0",
     "next": "latest",
