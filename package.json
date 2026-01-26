@@ -26,7 +26,7 @@
     "@emotion/react": "^11.13.3",
     "@reduxjs/toolkit": "^2.11.2",
     "dayjs": "^1.11.19",
-    "es-toolkit": "^1.43.0",
+    "es-toolkit": "^1.44.0",
     "next": "latest",
     "next-sitemap": "^4.2.3",
     "react": "^19",
