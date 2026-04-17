@@ -47,13 +47,13 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^17.4.0",
+    "globals": "^17.5.0",
     "husky": "^9.1.6",
     "lint-staged": "^16.3.1",
     "prettier": "^3.7.4",
     "lint-staged": "^16.4.0",
     "prettier": "^3.8.2",
-    "typescript": "^5"
+    "typescript": "^6"
   },
   "lint-staged": {
     "**/*.{tsx,ts,jsx,js}": [
