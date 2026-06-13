@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@source '../src';
+
+/* Brand palette migrated from the former Chakra `theme.ts` (primary/secondary, 50→900). */
+@theme {
+  --color-primary-50: #e8f0fe;
+  --color-primary-100: #d2e1fc;
+  --color-primary-200: #bcd2fa;
+  --color-primary-300: #a6c4f9;
+  --color-primary-400: #90b4f7;
+  --color-primary-500: #7aa6f5;
+  --color-primary-600: #6397f4;
+  --color-primary-700: #4e88f2;
+  --color-primary-800: #3779f0;
+  --color-primary-900: #1a5de4;
+
+  --color-secondary-50: #f7f4ff;
+  --color-secondary-100: #e8dfff;
+  --color-secondary-200: #f0eaff;
+  --color-secondary-300: #e0d5ff;
+  --color-secondary-400: #c9b5ff;
+  --color-secondary-500: #d8caff;
+  --color-secondary-600: #d1c0ff;
+  --color-secondary-700: #c1abff;
+  --color-secondary-800: #b9a0ff;
+  --color-secondary-900: #b296ff;
+
+  --color-warning: #e03028;
+  --color-success: #2fb916;
+
+  --font-sans:
+    var(--font-noto-sans), -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue',
+    'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #f9fafc;
+}

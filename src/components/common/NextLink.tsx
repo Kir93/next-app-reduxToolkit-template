@@ -1,12 +1,13 @@
-import { Link as ChakraLink, LinkProps as ChakraLinkProps } from '@chakra-ui/react';
-import Link, { LinkProps } from 'next/link';
+import { ComponentProps } from 'react';
 
-type IProps = ChakraLinkProps & LinkProps;
+import Link from 'next/link';
+
+type IProps = ComponentProps<typeof Link>;
 
 export default function NextLink({ href, children, ...rest }: IProps) {
   return (
-    <ChakraLink asChild {...rest}>
-      <Link href={href}>{children}</Link>
-    </ChakraLink>
+    <Link href={href} {...rest}>
+      {children}
+    </Link>
   );
 }

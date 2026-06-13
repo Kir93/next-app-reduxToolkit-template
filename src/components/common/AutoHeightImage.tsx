@@ -1,15 +1,19 @@
-import { Image } from '@chakra-ui/react';
 import NextImage, { ImageProps } from 'next/image';
 
-interface IAutoHeightImage extends Omit<ImageProps, 'width'> {
-  width?: string | number;
-  alt: string;
+interface IAutoHeightImage extends Omit<ImageProps, 'width' | 'height' | 'alt'> {
+  width?: number;
+  alt?: string;
 }
 
-const AutoHeightImage = ({ width = '100%', alt = '', ...props }: IAutoHeightImage) => (
-  <Image asChild width={width} h="auto" alt={alt}>
-    <NextImage {...props} alt={alt} layout="fill" />
-  </Image>
+const AutoHeightImage = ({ width = 0, alt = '', ...props }: IAutoHeightImage) => (
+  <NextImage
+    {...props}
+    alt={alt}
+    width={width}
+    height={0}
+    sizes="100vw"
+    style={{ width: '100%', height: 'auto' }}
+  />
 );
 
 export default AutoHeightImage;

@@ -1,9 +1,10 @@
+import './globals.css';
+
 import { notoSans } from '@configs/bigContents';
 
-import ChakraUIProvider from '@provider/ChakraUIProvider';
 import ReduxProvider from '@provider/ReduxProvider';
 
-import { AppLayout } from '@components/layout';
+import AppLayout from './_components/AppLayout';
 
 import type { Metadata } from 'next';
 
@@ -21,9 +22,7 @@ export default function RootLayout({
     <html lang="ko" className={notoSans.variable}>
       <body>
         <ReduxProvider>
-          <ChakraUIProvider>
-            <AppLayout>{children}</AppLayout>
-          </ChakraUIProvider>
+          <AppLayout>{children}</AppLayout>
         </ReduxProvider>
       </body>
     </html>

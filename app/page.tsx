@@ -1,16 +1,14 @@
-import { Box, Text } from '@chakra-ui/react';
-
-import CommonBar from '@atoms/common/CommonBar';
-
-import { HomeButtonSection, ReducerButtonSection } from '@components/home';
+import ButtonSection from './_components/ButtonSection';
+import CommonBar from './_components/CommonBar';
+import ReducerButtonSection from './_components/ReducerButtonSection';
 
 export default function Home() {
   return (
-    <Box w="100%">
-      <HomeButtonSection />
-      <Text fontSize="lg">Home Style!</Text>
+    <div className="w-full">
+      <ButtonSection />
+      <p className="text-lg">Home Style!</p>
       <CommonBar />
       <ReducerButtonSection />
-    </Box>
+    </div>
   );
 }

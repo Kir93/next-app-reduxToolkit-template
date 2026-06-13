@@ -1,6 +1,5 @@
-import { ImageProps, Image as Img } from '@chakra-ui/react';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import Image from 'next/image';
+import Image, { ImageProps } from 'next/image';
 
 interface IProps extends Omit<ImageProps, 'src' | 'alt'> {
   src: string | StaticImport;
@@ -8,9 +7,5 @@ interface IProps extends Omit<ImageProps, 'src' | 'alt'> {
 }
 
 export default function NextImage({ src, alt, ...rest }: IProps) {
-  return (
-    <Img asChild {...rest}>
-      <Image src={src} alt={alt} />
-    </Img>
-  );
+  return <Image src={src} alt={alt} {...rest} />;
 }
