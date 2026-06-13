@@ -1,23 +1,12 @@
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
+import nextConfig from 'eslint-config-next';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import prettier from 'eslint-plugin-prettier';
 import globals from 'globals';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all
-});
-
 export default defineConfig([
   {
-    extends: compat.extends('next', 'prettier'),
+    extends: [nextConfig, eslintConfigPrettier],
     ignores: ['*.js', 'next-env.d.ts'],
     plugins: {
       prettier
@@ -59,11 +48,6 @@ export default defineConfig([
               position: 'after'
             },
             {
-              pattern: '@styles/**',
-              group: 'internal',
-              position: 'after'
-            },
-            {
               pattern: '@api/**',
               group: 'internal',
               position: 'after'
@@ -89,12 +73,12 @@ export default defineConfig([
               position: 'after'
             },
             {
-              pattern: '@atoms/**',
+              pattern: '@components/**',
               group: 'internal',
               position: 'after'
             },
             {
-              pattern: '@components/**',
+              pattern: '@lib/**',
               group: 'internal',
               position: 'after'
             }

@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 
 import Image, { ImageProps } from 'next/image';
 
@@ -10,22 +10,21 @@ interface IProps extends ImageProps {
 
 const ImageFallback: FC<IProps> = (props) => {
   const { src, fallbackSrc, alt, ...rest } = props;
-  const [imgSrc, setImgSrc] = useState(false);
-  const [oldSrc, setOldSrc] = useState(src);
+  const [errored, setErrored] = useState(false);
+  const [prevSrc, setPrevSrc] = useState(src);
 
-  const onError = useCallback(() => setImgSrc(true), []);
+  // Reset the error state when src changes, during render instead of in an effect.
+  if (prevSrc !== src) {
+    setPrevSrc(src);
+    setErrored(false);
+  }
 
-  useEffect(() => {
-    if (oldSrc !== src) {
-      setImgSrc(false);
-      setOldSrc(src);
-    }
-  }, [oldSrc, src]);
+  const onError = useCallback(() => setErrored(true), []);
 
   return (
     <Image
       {...{ ...rest, alt, blurDataURL, onError }}
-      src={imgSrc ? fallbackSrc : src}
+      src={errored ? fallbackSrc : src}
       placeholder="blur"
     />
   );
