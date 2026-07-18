@@ -39,8 +39,10 @@ robots.txt
 *.tsbuildinfo
 next-env.d.ts
 
-# GitHub Copilot Instructions
-copilot-instructions.md
+# AI config (local — symlinked to personal config; public CLAUDE.md/AGENTS.md stay tracked)
+.claude/
+CLAUDE.local.md
+AGENTS.local.md
 
 # cache files
 .eslintcache
