@@ -31,7 +31,7 @@
       "@lib": ["./src/lib"],
       "@api/*": ["./src/api/*"],
       "@utils/*": ["./src/utils/*"],
-      "@configs/*": ["./src/config/*"],
+      "@config/*": ["./src/config/*"],
       "@public/*": ["./public/*"],
       "@store/*": ["./src/store/*"],
       "@components/*": ["./src/components/*"],

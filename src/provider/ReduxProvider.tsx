@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Provider } from 'react-redux';
 
-import { makeStore } from '@configs/configureStore';
+import { makeStore } from '@config/configureStore';
 
 export default function ReduxProvider({ children }: { children: React.ReactNode }) {
   const [store] = useState(() => makeStore());

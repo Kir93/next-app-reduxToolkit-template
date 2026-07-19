@@ -1,6 +1,6 @@
 import './globals.css';
 
-import { notoSans } from '@configs/bigContents';
+import { notoSans } from '@config/bigContents';
 
 import ReduxProvider from '@provider/ReduxProvider';
 
