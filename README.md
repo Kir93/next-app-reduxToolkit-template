@@ -86,7 +86,8 @@ Important library version history
 
 This template ships with AI coding-assistant instructions, so tools like Claude Code, Cursor, Codex, and Copilot follow its conventions out of the box:
 
-- [`CLAUDE.md`](./CLAUDE.md) — canonical conventions (tech stack, folder layout, code style, Redux Toolkit typed-hooks pattern, and the React Compiler "no manual memoization" rule).
-- [`AGENTS.md`](./AGENTS.md) — vendor-neutral pointer to `CLAUDE.md` with a 3-line summary for tools that read `AGENTS.md`.
+- [`AGENTS.md`](./AGENTS.md) — canonical conventions (tech stack, folder layout, code style, Redux Toolkit typed-hooks pattern, the React Compiler "no manual memoization" rule) plus Next.js framework rules. A vendor-neutral standard that Cursor, Copilot coding agent, Codex, and 30+ other AI tools read natively.
+- [`CLAUDE.md`](./CLAUDE.md) — a Claude Code pointer that re-exports `AGENTS.md` via an `@AGENTS.md` import.
+- [`.mcp.json`](./.mcp.json) — a preconfigured MCP server (`next-devtools`) so MCP-aware tools can inspect the running dev server out of the box.
 
-After creating your project, edit `CLAUDE.md` to match your stack. Personal or machine-local overrides can live in a gitignored `CLAUDE.local.md`, which Claude Code merges automatically.
+After creating your project, edit `AGENTS.md` to match your stack. Personal or machine-local overrides can live in a gitignored `AGENTS.local.md` / `CLAUDE.local.md`, which the assistant merges automatically.
