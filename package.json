@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "author": "Kir93",
   "license": "MIT",
+  "packageManager": "pnpm@11.8.0",
+  "engines": {
+    "node": ">=20.9"
+  },
   "scripts": {
     "dev": "next",
     "build": "cross-env NODE_ENV=production next build",
     "start": "cross-env NODE_ENV=production next start",
-    "type-check": "tsc",
+    "type-check": "next typegen && tsc",
+    "lint": "eslint --cache .",
+    "format": "prettier --check .",
     "depcheck": "npx depcheck",
     "svgo": "npx svgo -f public/svgs",
     "prepare": "husky",
