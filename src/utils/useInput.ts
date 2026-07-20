@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 
 const useInput = <T>(
   initValue: T
@@ -8,10 +8,8 @@ const useInput = <T>(
   React.Dispatch<React.SetStateAction<T>>
 ] => {
   const [value, setter] = useState(initValue);
-  const handler = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => setter(e.target.value as unknown as T),
-    []
-  );
+  const handler = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setter(e.target.value as unknown as T);
   return [value, handler, setter];
 };
 

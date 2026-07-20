@@ -1,7 +1,5 @@
 'use client';
 
-import { useCallback } from 'react';
-
 import { useRouter } from 'next/navigation';
 
 /**
@@ -22,7 +20,7 @@ import { useRouter } from 'next/navigation';
 const useBack = (defaultPath = '/') => {
   const router = useRouter();
 
-  const goBack = useCallback(() => {
+  const goBack = () => {
     // SSR에서 window 객체가 없을 수 있기 때문에 체크
     if (typeof window === 'undefined') {
       router.replace(defaultPath);
@@ -34,7 +32,7 @@ const useBack = (defaultPath = '/') => {
     } else {
       router.back(); // 충분한 히스토리 스택이 있으면 일반적인 뒤로 가기 수행
     }
-  }, [router, defaultPath]);
+  };
 
   return goBack;
 };
