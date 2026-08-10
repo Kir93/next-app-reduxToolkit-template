@@ -49,8 +49,8 @@ importers:
         specifier: ^9.39.4
         version: 9.39.4
       '@next/eslint-plugin-next':
-        specifier: ^16.2.10
-        version: 16.2.10
+        specifier: ^16.3.0
+        version: 16.3.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))
       '@tailwindcss/postcss':
         specifier: 4.3.3
         version: 4.3.3
@@ -488,6 +488,9 @@ packages:
 
   '@next/eslint-plugin-next@16.2.10':
     resolution: {integrity: sha512-Gs8D2m21VnJeFo9qvYIIqJH94frWerWYu41BprU1pLtRVF7PCQNLiFZZ3fG+iPuj3K83Cwv/rt+msLOy8Qgu3Q==}
+
+  '@next/eslint-plugin-next@16.3.0':
+    resolution: {integrity: sha512-OqgJ8PN0d04KcPhDX/PTY5tJUJZxlbrt7O7FBsm4XE0XW2JDrKnDXsc9uo9WUimJGPoo2j+JRGhyXApC//mvbw==}
 
   '@next/swc-darwin-arm64@16.2.11':
     resolution: {integrity: sha512-wryL4pjKmDwGv2ox6+GZDFxvmtSRLqApBR8kL1j4+vhB7Z5vJC/zAnXpiR9Xkfzl0AS8WLMnsuGV/UKI67/rrw==}
@@ -2672,6 +2675,13 @@ snapshots:
   '@next/eslint-plugin-next@16.2.10':
     dependencies:
       fast-glob: 3.3.1
+
+  '@next/eslint-plugin-next@16.3.0(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))':
+    dependencies:
+      '@eslint-community/eslint-utils': 4.9.1(eslint@9.39.2(jiti@2.7.0)(supports-color@7.2.0))
+      fast-glob: 3.3.1
+    transitivePeerDependencies:
+      - eslint
 
   '@next/swc-darwin-arm64@16.2.11':
     optional: true
