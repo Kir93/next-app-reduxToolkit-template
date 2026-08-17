@@ -76,8 +76,8 @@ Important library version history
 
 | Name             | Version |
 | :--------------- | :------ |
-| react            | 19.2.7  |
-| next             | 16.2.7  |
+| react            | latest  |
+| next             | latest  |
 | tailwindcss      | v4      |
 | @base-ui/react   | v1      |
 | @reduxjs/toolkit | v2      |
